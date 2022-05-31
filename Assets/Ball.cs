@@ -12,6 +12,7 @@ public class Ball : MonoBehaviour
         Launch();
     }
 
+    // Hieronder wordt de bal random het speelveld ingeworpen en met een random snelheid//
     void Launch()
     {
         transform.position = Vector2.zero;
@@ -20,6 +21,7 @@ public class Ball : MonoBehaviour
         rg.velocity = new Vector2(x * speed, y * speed);
     }
 
+    // Hieronder wordt aangegeven als de bal iets raakt dat het naar links/rechts terug gedrukt wordt
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Links")
